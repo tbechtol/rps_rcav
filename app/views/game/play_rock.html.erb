@@ -1,0 +1,18 @@
+<h1>Hello!</h1>
+
+<p>You played Rock</p>
+
+<p>
+  The computer played <%= @computer_move %>
+</p>
+
+<%if @computer_move == "rock"%>
+You tied
+
+<%elsif @computer_move == "paper"%>
+You lost
+
+<%elsif @computer_move == "scissors"%>
+You win
+
+<% end %>
