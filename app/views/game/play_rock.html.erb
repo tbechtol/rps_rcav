@@ -1,18 +1,48 @@
-<h1>Hello!</h1>
+<div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <!-- <div class="panel panel-success"> -->
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">
+        <p>Rock</p>
+      </h2>
+    </div>
+    <div class="panel-body">
+      <img src = "http://localhost:3000/assets/images/rock.png" width = "200">
+      <!-- </div> -->
+    </div>
+  </div>
 
-<p>You played Rock</p>
+  <div class="col-md-4 col-xs-6">
+    <!-- <div class="panel panel-danger"> -->
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">
+        <p>
+          <%= @computer_move %>
+        </p>
+          <img src = "http://localhost:3000/assets/images/<%= @computer_move %>.png" width = "200">
+        </div>
+      <!-- </div> -->
+    </div>
 
-<p>
-  The computer played <%= @computer_move %>
-</p>
+    <div class="row">
+    <div class="col-md-12">
+      <div class="well text-center">
+        <h1>
+          <span>
 
-<%if @computer_move == "rock"%>
-You tied
+            <%if @computer_move == "rock"%>
+            You tied
 
-<%elsif @computer_move == "paper"%>
-You lost
+            <%elsif @computer_move == "paper"%>
+            You lost
 
-<%elsif @computer_move == "scissors"%>
-You win
+            <%elsif @computer_move == "scissors"%>
+            You win
 
-<% end %>
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
